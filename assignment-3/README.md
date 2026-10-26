@@ -36,6 +36,6 @@ create a line chart:
 - Y-axis: `Time (ms)`
 - one line for each `N`
 
-[Google Sheets]([https://docs.google.com/spreadsheets/create](https://docs.google.com/spreadsheets/d/1Lr7mPVfpvI2vKugTZWR6_Rc_ncJavvwbNcks2gYg3BQ/edit?usp=sharing))
+[Google Sheets](https://docs.google.com/spreadsheets/d/1Lr7mPVfpvI2vKugTZWR6_Rc_ncJavvwbNcks2gYg3BQ/edit?usp=sharing)
 
 ![AoSoA benchmark graph](aosoa_benchmark_graph.svg)
