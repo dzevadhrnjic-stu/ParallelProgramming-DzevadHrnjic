@@ -18,6 +18,14 @@ these columns:
 
 `N, V, Iterations, Time (ms)`
 
+## Code changes
+
+The original code was missing the AoSoA array allocation and cleanup. These
+were added with `new[]` and `delete[]`. The writes to the `R`, `G`, and `B`
+arrays were also enabled. The Makefile was fixed to use
+`aosoa_measurement.cpp` as its source file, and the CSV output was extended
+with the `Iterations` column.
+
 ## Explanation of results
 
 The time increases when `N` increases because the program processes more
