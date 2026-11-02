@@ -53,3 +53,7 @@ reduction tree change the order of additions. Since addition is not associative,
 the final result is not necessarily reproducible. A fixed reduction tree,
 pairwise summation, compensated summation, or a wider accumulator can improve
 reproducibility and numerical stability.
+
+## Google Spreadsheet
+
+[Assignment-4](https://docs.google.com/spreadsheets/d/1XaLTlcGwRR3CNKWofg9CM0bMd-_SLwyo1lnztXAWa0s/edit?usp=sharing)
