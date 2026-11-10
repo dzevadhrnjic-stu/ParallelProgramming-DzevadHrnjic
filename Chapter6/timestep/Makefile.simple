@@ -1,0 +1,31 @@
+CC ?= gcc
+VECTOR_WIDTH ?= 256
+CFLAGS = -g -O3 -fstrict-aliasing -ftree-vectorize -fopenmp-simd \
+	-march=native -mtune=native -mprefer-vector-width=$(VECTOR_WIDTH) \
+	-fopt-info-vec-optimized -fopt-info-vec-missed
+LDFLAGS = -lm
+
+TARGETS = timestep timestep_opt1 timestep_opt2 timestep_opt3 timestep_opt3_fast
+
+all: $(TARGETS)
+
+timestep: main.o timestep.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+timestep_opt1: main.o timestep_opt1.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+timestep_opt2: main.o timestep_opt2.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+timestep_opt3: main.o timestep_opt3.o
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+timestep_opt3_fast: main.o timestep_opt3_fast.o
+	$(CC) $(CFLAGS) -fno-trapping-math -fno-math-errno -o $@ $^ $(LDFLAGS)
+
+timestep_opt3_fast.o: timestep_opt3.c
+	$(CC) $(CFLAGS) -fno-trapping-math -fno-math-errno -c $< -o $@
+
+clean:
+	$(RM) $(TARGETS) *.o

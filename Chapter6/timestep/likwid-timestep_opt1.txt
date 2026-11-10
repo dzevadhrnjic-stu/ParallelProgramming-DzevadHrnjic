@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------------
+CPU name:	AMD Ryzen 5 5500                               
+CPU type:	AMD K19 (Zen3) architecture
+CPU clock:	3.92 GHz
+Cannot get access to MSRs. Please check permissions to the MSRs
