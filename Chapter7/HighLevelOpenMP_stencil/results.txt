@@ -1,0 +1,12 @@
+Stencil benchmark results
+=========================
+
+Run command:
+make clean
+make
+make run
+
+Version        Threads   Init (s)   Flush (s)   Stencil (s)   Total (s)
+stencil_opt2   12        0.022165   69.416247   50.715320      120.161576
+stencil_opt4   12        0.015279   37.136027   59.802005      96.967828
+stencil_opt6   12        0.006364   37.611918   52.378438      120.391597
